@@ -13,37 +13,22 @@ body {
 
 /* INICIO PAGINA HOME */
 
-#grid-home{
-    display: grid;
-    background: none;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 50px 700px 150px;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas:    "header header"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-items: center;
-}
+
 
 /* HEADER */
 
-.header{
-    grid-area: header;
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(252, 213, 206) ;
-    width: 99%;
-    height: 100%;
-    position: sticky;
-    top: 0px;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
 
+
+.header{
+    z-index: 1;
+    width: 100%;
+    height: 200px;
+    position: sticky
+    top: 0px;
+    background: url("../images/wave4.png");
+    background-repeat:  round space;
+    
+}
 
 .header__logo{
     display: flex;
@@ -57,55 +42,22 @@ body {
 .header__logo__text{
     font-family: Alex Brush;
     color: black;
-    font-size: 45px;
+    font-size: 80px;
 }
 
-.menu{
-    display: flex;
-    margin-right: 30px;
-}
 
-.menu__lista__items{
-    list-style-type: none;
-    display: inline-flex;
-    justify-content: space-between;
-    padding: 10px;
-    font-size: 20px;
-}
+/* con bootstrap */
 
-.menu__lista__items__links{
-    display: flex;
-    text-decoration: none;
+.navbar-nav{
     font-family: Lato;
-}
+    font-size: 25px;
+    margin-left: 350px;
 
-.menu__lista__items__links{
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #000000;
-    margin: 0 -.25rem;
-    padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
-.menu__lista__items__links:hover{
-    box-shadow: inset 100px 0 0 0 #D8E2DC;
-    color: blue
-}
-
-
-
-.data-container{
-	background:#ffebee;
-	height:100vh;
-	display:flex;
-	justify-content:center;
-	align-items:center;
 }
 
 /* TITULO */
 
 .h2-pages{
-    grid-area: titulo;
     display: flex;
     font-family: Lato;
     text-align: center;
@@ -114,23 +66,32 @@ body {
 }
 
 /* PRINCICPAL */
-
-main{
+/*
+#main-home{
     display: flex;
-    grid-area: main;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 99%;
+    width: 100;
     background-color: rgb(236, 228, 219);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+ */
+
+#main-home{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-column-gap: 6px;
+        grid-row-gap:6px;
+        height: 750px;
+}
+
 
 
 #slider-home{
-    width: 450px;
-    height: 650px;
+    width: 440px;
+    height: 700px;
     overflow: hidden;
 }
 
@@ -146,7 +107,7 @@ main{
 }
 
 #slider-home img{
-    width: 450px;
+    width: 410px;
     height: 100%;
 }
 
@@ -171,8 +132,8 @@ main{
 #div-parrafo{
     display: flex;
     flex-direction: column;
-    width: 900px;
-    height: 690px;
+    width: 950px;
+    height: 700px;
 }
 
 #div-parrafo p{
@@ -185,7 +146,7 @@ main{
 /* ICONOS REDES POSITION FIXED */
 .div_redes{
     position: fixed;
-    left: 30px;
+    left: 0px;
     top: 35%;
 }
 
@@ -254,18 +215,12 @@ main{
 
 /* INICIO PAGINA SERVICIOS */
 
-#grid-servicios{
+#main-servicios{
     display: grid;
-    background: none;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 50px 1200px 150px;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas:    "header header"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 6px;
+    grid-row-gap:6px;
+    height: 750px;
 }
 
 /* SERVICIOS VIDEOS */
@@ -353,19 +308,7 @@ main{
 
 /* MAIN */
 
-#grid-testimonios{
-    display: grid;
-    background: none;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 50px 1400px 150px;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas:    "header header"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-content: center;
-} 
+
 
 #div-testimonios-1{
     grid-area: main;
@@ -1138,299 +1081,8 @@ form [type=submit]{
 }
 
 
-.header-mobile{
-    display: none;
-}
 
-.nav-mobile{
-    display: none;
-}
-
-.footer-mobile{
-    display: none;
-}
-
-
- /* ---------------------------- FULL MOBILE ---------------------------*/
-
-@media only screen and (max-width: 480px) {
-
-    * {
-
-        margin: 0px;
-        padding: 0px;
-        text-decoration: none;
-        list-style: none;
-        box-sizing: border-box;
-    }
-    
-    body {
-        background-color: rgb(248, 237, 235);
-        font-family: Lato;
-    }
-
-/*          --------------------------------HOME MOBILE ------------*/
-
-    #grid-home{
-        display: grid;
-        grid-template-columns: 2;
-        grid-template-rows: 100px 50px 70px 900px 150px;
-        background: none;
-        grid-template-areas:"header header"
-                            "nav nav"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-items: center;
-    }
-
-
-    .header{
-        display: none;
-    }
-
-    .footer{
-        display: none;
-    }
-
-    .header-mobile{
-        grid-area: header;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-        background-color: rgb(252, 213, 206) ;
-        width: 100%;
-        height: 100px;
-        position: sticky;
-        top: 0px;
-        justify-content: space-between;
-        align-items: center; 
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-
-    }
-
-    .nav-mobile{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        grid-area: nav;
-        width: 100%;
-        height: 70px;
-        background-color: rgb(252, 213, 206) ;
-        position: sticky;
-        top: 100px;
-    }
-
-    .menu__lista__items__links{
-        font-size: 14px;
-        padding: 2px auto;
-    }
-
-    .h2-pages{
-        grid-area: titulo;
-        display: flex;
-        width: 300px;
-        font-size: 18px;
-        padding-left: 0px;
-    }
-
-    main{
-        grid-area: main;
-    }
-
-    #slider-home{
-        width: 250px;
-        height: 300px;
-    }
-
-    #slider-home img{
-        width: 250px;
-    }
-
-    #div-parrafo{
-        width: 230px;
-
-    }
-
-    #div-parrafo p{
-        font-size: 12px;
-    }
-
-    .div_redes{
-        position: fixed;
-        left: 5px;
-        top: 35%;
-    }
-    
-
-    .div_redes ul{
-        font-size: 10px;
-        list-style: none;
-    }
-
-    .footer-mobile{
-        height: 200px;
-        width: 100%;
-        grid-area: footer;
-        display: flex;
-        background-color: rgb(254, 200, 154);
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .footer-mobile p{
-        margin-left: 5px;
-        
-    }
-
-    /*          ----------------SERVICIOS MOBILE ------------*/
-
-    #grid-servicios{
-        display: grid;
-        grid-template-columns: 2;
-        grid-template-rows: 100px 50px 50px 2300px 150px;
-        background: none;
-        grid-template-areas:"header header"
-                            "nav nav"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-items: center;
-    }
-
-    #div-section-servicios2{
-        width: 300px;
-        grid-area: main;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
-    
-    .div__fotos__servicios{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 250px;
-        height: 200px;
-    }
-    
-    .servicios__imagenes{
-        width: 100%;
-        height: 100%;
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-    
-    .div__bloque__titulo__descripcion{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 290;
-        height: 200px;
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-    
-    
-    .h3__servicios{
-        font-family: Lato;
-        font-size: 20px;
-        text-align:start;
-        
-    }
-
-    .div__parrafo{
-        width: 290px;
-    }
-    
-    .div__parrafo p{
-        font-family: Lato;
-        font-size: 16px;
-    }
-
-    /*  ------------------------TESTIMONIOS MOBILE -----------------------------*/
-
-    #grid-testimonios{
-        display: grid;
-        grid-template-columns: 2;
-        grid-template-rows: 100px 50px 70px 3000px 150px;
-        background: none;
-        grid-template-areas:"header header"
-                            "nav nav"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-items: center;
-    }
-
-
-    
-    /*  ------------------------SOBRE MI MOBILE -----------------------------*/
-
-
-    #grid-sobremi{
-        display: grid;
-        grid-template-columns: 2;
-        grid-template-rows: 100px 50px 70px 1800px 150px;
-        background: none;
-        grid-template-areas:"header header"
-                            "nav nav"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-items: center;
-    }
-
-    #div__sobremi__fotos{
-        width: 315px;
-    }
-    
-    #div__sobremi__texto{
-        width: 315px; 
-    }
-
-    #div__sobremi__texto p{
-        font-size: 14px;
-    }
-
-
-    /*  ------------------------CONTACTO MOBILE -----------------------------*/
-
-
-    #grid-contacto{
-        display: grid;
-        grid-template-columns: 2;
-        grid-template-rows: 100px 50px 70px 1450px 150px;
-        background: none;
-        grid-template-areas:"header header"
-                            "nav nav"
-                            "titulo titulo"
-                            "main main"
-                            "footer footer";
-    justify-items: center;
-    }
-
-    #div__contacto__vector div{
-        width: 315px;
-        height: 315px;
-
-    } 
-    
-    #div__contacto__vector div img{
-        width: 315px;
-    }
-
-
-
-
-    
-    
-}
-
+/* ---------------------------- FULL MOBILE ---------------------------*/
 
 
 
